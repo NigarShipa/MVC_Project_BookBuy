@@ -597,3 +597,5 @@ C:\Users\Asus\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\sv\Hangfire.C
 C:\Users\Asus\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\tr-TR\Hangfire.Core.resources.dll
 C:\Users\Asus\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\Asus\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\zh\Hangfire.Core.resources.dll
+C:\Users\Asus\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\BulkyBook.Utility.dll
+C:\Users\Asus\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\BulkyBook.Utility.pdb
