@@ -1,0 +1,17 @@
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.DataAccess.deps.json
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.DataAccess.runtimeconfig.json
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.DataAccess.dll
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.DataAccess.pdb
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.Models.dll
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net7.0\BulkyBook.Models.pdb
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.AssemblyInfo.cs
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.csproj.CopyComplete
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.dll
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\refint\BulkyBook.DataAccess.dll
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.pdb
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\BulkyBook.DataAccess.genruntimeconfig.cache
+C:\Users\Asus\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net7.0\ref\BulkyBook.DataAccess.dll
