@@ -24,6 +24,13 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath = $"/Identity/Account/LogOut";
+    options.AccessDeniedPath = $"/Identity/Account/AccessDeniedPath";
+
+});
 
 var app = builder.Build();
 

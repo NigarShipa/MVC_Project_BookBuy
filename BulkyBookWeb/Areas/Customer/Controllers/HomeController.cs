@@ -1,7 +1,9 @@
 ﻿using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 using BulkyBook.DataAccess.Repository.IRepository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BulkyBookWeb.Controllers
 {
@@ -23,15 +25,44 @@ namespace BulkyBookWeb.Controllers
             return View(productList);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int ProductId)
         {
             ShoppingCard cardObj = new()
             {
                 Count = 1,
-                product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, "Category,CoverType")
+                ProductId = ProductId,
+                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == ProductId, "Category,CoverType")
             };
 
             return View(cardObj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult Details(ShoppingCard shoppingCard)
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            shoppingCard.ApplicationUserId = claim.Value;
+
+            //if same id holder want to add more product
+
+            ShoppingCard cardFromDb = _unitOfWork.ShoppingCard.GetFirstOrDefault(
+                u => u.ApplicationUserId == claim.Value && u.ProductId == shoppingCard.ProductId);
+            if (cardFromDb == null)
+            {
+                _unitOfWork.ShoppingCard.Add(shoppingCard);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCard.IncrementCount(cardFromDb, shoppingCard.Count);
+            }
+
+
+
+            //  _unitOfWork.ShoppingCard.Add(shoppingCard);
+            _unitOfWork.Save();
+            return RedirectToAction(nameof(Index));
         }
 
 
