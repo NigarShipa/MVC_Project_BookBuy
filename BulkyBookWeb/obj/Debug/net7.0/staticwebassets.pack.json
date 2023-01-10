@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\Products\\4afcd954-88b7-44ed-b55e-5948a5314959.jpg"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\Products\\4afd5f1c-f60e-4f06-a189-159b2d42299e.jpg",
+      "PackagePath": "staticwebassets\\images\\Products\\4afd5f1c-f60e-4f06-a189-159b2d42299e.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\Products\\59eae957-ba01-4d1a-9893-3d99f4762e89.jpg",
       "PackagePath": "staticwebassets\\images\\Products\\59eae957-ba01-4d1a-9893-3d99f4762e89.jpg"
     },
@@ -71,6 +75,10 @@
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\Products\\c49e2214-7707-43da-b187-47de6660938b.jpg",
       "PackagePath": "staticwebassets\\images\\Products\\c49e2214-7707-43da-b187-47de6660938b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\new.jpg",
+      "PackagePath": "staticwebassets\\images\\new.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\Company.js",

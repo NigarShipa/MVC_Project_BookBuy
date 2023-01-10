@@ -24,17 +24,26 @@ namespace BulkyBook.DataAccess.Repository
             _db.OrderHeaders.Update(obj);
         }
 
-        public void UpdateStatus(int id, string orderStatus, string? paymentStatus = null)
+        public void UpdateStatus(int id, string orderStatus, string? paymentIntentId = null)
         {
             var orderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
             if (orderFromDb != null)
             {
                 orderFromDb.OrderStatus = orderStatus;
-                if (paymentStatus != null)
+                if (paymentIntentId != null)
                 {
-                    orderFromDb.PaymentStatus = paymentStatus;
+                    orderFromDb.PaymentStatus = paymentIntentId;
                 }
             }
+
+        }
+
+        //
+        public void UpdateStripeId(int id, string sessionId, string paymentIntentId)
+        {
+            var orderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
+            orderFromDb.SessionId = sessionId;
+            orderFromDb.PaymentIntentId = paymentIntentId;
         }
     }
 }

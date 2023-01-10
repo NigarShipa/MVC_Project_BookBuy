@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@using BulkyBook.Utility
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -25,27 +29,42 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        @if (User.IsInRole(Sd.Role_Admin))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item " asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
 
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item " asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">CoverType</a>
 
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">CoverType</a>
-
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
-                                <a class="dropdown-item " asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
-                                <a class="dropdown-item " asp-area="Admin" asp-controller="Item" asp-action="Index">Item</a>
-                                <div class="dropdown-divider"></div>
-                            </div>
-                        </li>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                    <a class="dropdown-item " asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                    <a class="dropdown-item " asp-area="Admin" asp-controller="Item" asp-action="Index">Item</a>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </li>
+                        }
 
                         @*for cart*@
-                        <li class="nav-item">
-                            <a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
-                                <i class="bi bi-cart-plus-fill"></i>
-                            </a>
-                        </li>
+                        @if (HttpContextAccessor.HttpContext?.Session.GetInt32(Sd.SessionCart) != null)
+                        {
+                            <li class="nav-item">
+                                <a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                                    <i class="bi bi-cart-plus-fill"></i>&nbsp;
+                                    (@HttpContextAccessor.HttpContext.Session.GetInt32(Sd.SessionCart))
+                                </a>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                                    <i class="bi bi-cart-plus-fill"></i>&nbsp; (0)
+                                </a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                     @* <form class="d-flex">

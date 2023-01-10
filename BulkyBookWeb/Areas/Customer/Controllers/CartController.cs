@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using BulkyBook.Utility;
+using Stripe.Checkout;
+using Microsoft.Extensions.Options;
 
 namespace BulkyBookWeb.Areas.Customer.Controllers
 {
@@ -117,10 +119,65 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 
             }
 
-            _unitOfWork.ShoppingCard.RemoveRange(ShoppingCartVM.ListCart);
-            _unitOfWork.Save();
-            return RedirectToAction("Index", "Home");
+            //code for Stripe
+            var domain = "https://localhost:44308/";
+            var options = new SessionCreateOptions
+            {
+                LineItems = new List<SessionLineItemOptions>(),
+                Mode = "payment",
+                SuccessUrl = domain + $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
+                CancelUrl = domain + $"customer/cart/index",
+            };
+            foreach (var item in ShoppingCartVM.ListCart)
+            {
+                var sessionLineItem = new SessionLineItemOptions
+                {
+                    PriceData = new SessionLineItemPriceDataOptions
+                    {
+                        UnitAmount = (long)(item.Price * 100),
+                        Currency = "usd",
+                        ProductData = new SessionLineItemPriceDataProductDataOptions
+                        {
+                            Name = item.Product.Title,
+                        },
+                    },
+                    Quantity = item.Count,
+                };
+                options.LineItems.Add(sessionLineItem);
 
+            }
+
+            var service = new SessionService();
+            Session session = service.Create(options);
+            //ShoppingCartVM.OrderHeader.SessionId = session.Id;
+            //ShoppingCartVM.OrderHeader.PaymentIntentId = session.PaymentIntentId;
+            _unitOfWork.OrderHeader.UpdateStripeId(ShoppingCartVM.OrderHeader.Id, session.Id, session.PaymentIntentId);
+            _unitOfWork.Save();
+            Response.Headers.Add("Location", session.Url);
+            return new StatusCodeResult(303);
+            //
+            //_unitOfWork.ShoppingCard.RemoveRange(ShoppingCartVM.ListCart);
+            //_unitOfWork.Save();
+            //return RedirectToAction("Index", "Home");
+
+        }
+
+        public IActionResult OrderConfirmation(int id)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id);
+            var service = new SessionService();
+            Session session = service.Get(orderHeader.SessionId);
+            if (session.PaymentStatus.ToLower() == "paid")
+            {
+                _unitOfWork.OrderHeader.UpdateStatus(id, Sd.StatusApproved, Sd.PaymentStatusApproved);
+                _unitOfWork.Save();
+            }
+            List<ShoppingCard> shoppingCarts = _unitOfWork.ShoppingCard.GetAll
+                (u => u.ApplicationUserId == orderHeader.ApplicationUserId).ToList();
+            ;
+            _unitOfWork.ShoppingCard.RemoveRange(shoppingCarts);
+            _unitOfWork.Save();
+            return View(id);
         }
 
 
@@ -141,6 +198,8 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             if (cart.Count <= 1)
             {
                 _unitOfWork.ShoppingCard.Remove(cart);
+                var count = _unitOfWork.ShoppingCard.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).ToList().Count - 1;
+                HttpContext.Session.SetInt32(Sd.SessionCart, count);
             }
             else
             {
@@ -158,6 +217,8 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
                 .GetFirstOrDefault(u => u.Id == cartId);
             _unitOfWork.ShoppingCard.Remove(cart);
             _unitOfWork.Save();
+            var count = _unitOfWork.ShoppingCard.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).ToList().Count;
+            HttpContext.Session.SetInt32(Sd.SessionCart, count);
             return RedirectToAction(nameof(Index));
         }
         private double GetPriceBasedOnQuantity(double quantity, double price, double price50, double price100)

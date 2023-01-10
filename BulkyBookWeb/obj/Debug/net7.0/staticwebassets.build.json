@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lbsPeDKzX0TzyXojWI/d/sLeJeFHgutA+my7um+K0cs=",
+  "Hash": "7Cpz1q3V16R3BlOttJzU6np6hJIAl3ZvGvDmp01y7Y0=",
   "Source": "BulkyBookWeb",
   "BasePath": "_content/BulkyBookWeb",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\new.jpg",
+      "SourceId": "BulkyBookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\",
+      "BasePath": "_content/BulkyBookWeb",
+      "RelativePath": "images/new.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\new.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\Products\\02945b8d-0c3d-46a0-97a7-a5a4a4bc94d7.jpg",
       "SourceId": "BulkyBookWeb",
       "SourceType": "Discovered",
@@ -1239,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Products\\4afcd954-88b7-44ed-b55e-5948a5314959.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\Products\\4afd5f1c-f60e-4f06-a189-159b2d42299e.jpg",
+      "SourceId": "BulkyBookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\",
+      "BasePath": "_content/BulkyBookWeb",
+      "RelativePath": "images/Products/4afd5f1c-f60e-4f06-a189-159b2d42299e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\4afd5f1c-f60e-4f06-a189-159b2d42299e.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\Products\\59eae957-ba01-4d1a-9893-3d99f4762e89.jpg",
