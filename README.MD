@@ -10,4 +10,13 @@ This is a simple project for Book retail management
 ![Add to Cart Page](Interfaces/add-to-cart-page.png "Add to Cart Page")
 ### Order Page
 ![Order Page](Interfaces/order-page.png "Order Page")
+### Stripe Payment
+![Stripe Payment](Interfaces/StripePayment.png "Stripe Payment Page")
+### Succesfully Order Place
+![Successfully order place](Interfaces/PaymentSuccessfull.png " Successfully order place Page")
+
+
+
+
+
 
