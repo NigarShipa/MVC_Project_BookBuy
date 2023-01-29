@@ -17,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.MD = README.MD
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{52F55CAC-F22A-45D5-BBD2-3AB35B52CE94}"
+	ProjectSection(SolutionItems) = preProject
+		Interfaces\add-to-cart-page.png = Interfaces\add-to-cart-page.png
+		Interfaces\order-page.png = Interfaces\order-page.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +48,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52F55CAC-F22A-45D5-BBD2-3AB35B52CE94} = {653FF941-0753-4F14-AC74-177FB32A6789}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6FC49E2D-F38F-49CD-9987-195F13568627}

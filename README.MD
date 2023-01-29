@@ -4,3 +4,10 @@ This is a simple project for Book retail management
 	- Admin Can add new book into the system for selling
 	- Buyers from Company/Invidual can order books and make payment(Stripe is used for payment)
 	- Authentication and Authorization is implemented as well
+
+## User Interfaces
+### Add to Cart Page
+![Add to Cart Page](Interfaces/add-to-cart-page.png "Add to Cart Page")
+### Order Page
+![Order Page](Interfaces/order-page.png "Order Page")
+
