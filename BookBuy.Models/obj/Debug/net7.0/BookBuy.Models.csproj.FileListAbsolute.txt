@@ -1,0 +1,12 @@
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\bin\Debug\net7.0\BookBuy.Models.deps.json
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\bin\Debug\net7.0\BookBuy.Models.dll
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\bin\Debug\net7.0\BookBuy.Models.pdb
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.AssemblyInfo.cs
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.dll
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\refint\BookBuy.Models.dll
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\BookBuy.Models.pdb
+C:\Users\Asus\source\repos\BulkyBook\BookBuy.Models\obj\Debug\net7.0\ref\BookBuy.Models.dll

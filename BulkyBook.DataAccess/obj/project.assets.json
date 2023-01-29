@@ -8569,9 +8569,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
-      "projectName": "BulkyBook.DataAccess",
-      "projectPath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BookBuy.DataAccess.csproj",
+      "projectName": "BookBuy.DataAccess",
+      "projectPath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BookBuy.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\obj\\",
       "projectStyle": "PackageReference",

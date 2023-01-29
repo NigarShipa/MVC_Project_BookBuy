@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tnQpOx+sdcxjM3ibbTppzE9AacGh+c9+Ewf8E9Yle9U1YdfMbNpRZe0EPskzUEy7NzTuhGXE7UQsw+JsESJk4Q==",
+  "dgSpecHash": "LIhwbOpgwiUijNN/qPUbT1Ej8s06tOzUoRxKrAP7Kd5u9yks8wPcyGnrN5CagQ9QupbYPnqEcxF5s2nDABa1mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BookBuy.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

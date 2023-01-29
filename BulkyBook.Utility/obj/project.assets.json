@@ -1094,9 +1094,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
-      "projectName": "BulkyBook.Utility",
-      "projectPath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BookBuy.Utility.csproj",
+      "projectName": "BookBuy.Utility",
+      "projectPath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BookBuy.Utility.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Asus\\source\\repos\\BulkyBook\\BulkyBook.Utility\\obj\\",
       "projectStyle": "PackageReference",
